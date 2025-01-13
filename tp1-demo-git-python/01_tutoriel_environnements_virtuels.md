@@ -26,18 +26,19 @@ Dans les prochaines sections, nous allons couvrir:
 - L'utilisation d'environnements virtuels avec des Jupyter Notebooks
 
 ## Installer Python
+
 Si vous n'avez pas déjà `conda` sur votre système, vous pouvez suivre les instructions pour l'installer aux liens suivants:
 
-- Anaconda: https://www.anaconda.com/download/
-- Miniconda: https://docs.conda.io/projects/miniconda/en/latest/
+- Anaconda: <https://www.anaconda.com/download/>
+- Miniconda: <https://docs.conda.io/projects/miniconda/en/latest/>
 
 Je suggère Miniconda, qui n'installe que le minimum requis et prend moins d'espace.
 
-Une fois l'installation terminée, vous devriez avoir un dossier `miniconda3` dans votre "home". Vous pouvez le vérifier avec la commande `ls` (ou `dir` sur Windows). Sur Linux et MacOS, vous devriez aussi voir "(base)" affiché dans votre terminal. Sur Windows, le programme "Anaconda Prompt" devrait être disponible. Ouvrez le et "(base)" devrait également y être affiiché.
+Une fois l'installation terminée, vous devriez avoir un dossier `miniconda3` dans votre "home". Vous pouvez le vérifier avec la commande `ls` (ou `dir` sur Windows). Sur Linux et MacOS, vous devriez aussi voir "(base)" affiché dans votre terminal. Sur Windows, le programme "Anaconda Prompt" ou "Anaconda PowerShell" devrait être disponible. Ouvrez le et "(base)" devrait également y être affiiché.
 
 ## Créer un environnement virtuel
+
 Une fois que tout ceci est fait, rendez-vous dans le dossier que nous avons créé lors du [tutoriel Git](tp1-demo-git-python/00_tutoriel_git.md).
-Nous allons créer un environnement pour ce projet (vous pouvez aussi créer un environnement pour le cours dans son ensemble que vous réutiliserez cette session et le nommer `phy3051`, par exemple).
 
 Pour créer un environnement avec `conda`, on peut utiliser la commande:
 
@@ -102,7 +103,6 @@ python -m pip install -U -r requirements.txt
 ```
 
 Voilà! Vous pouvez maintenant ouvrir le Jupyter Notebook du TP d'aujourd'hui: [02_notebook_revision_python.ipynb](tp1-demo-git-python/02_revision_python.ipynb)
-
 
 ## Alternatives
 

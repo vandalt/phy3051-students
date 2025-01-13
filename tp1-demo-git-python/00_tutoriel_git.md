@@ -1,16 +1,31 @@
 # Tutoriel Git pour PHY3051
 
-Ce document contient un résumé des commandes Git vues en classe.
+Git est un programme qui permet de "versionner" votre code.
+En d'autre mots, vous pouvez ajouter et enregistrer les modifications à votre code dans Git, qui gardera un historique de toutes ces modifications.
+Git permet aussi de synchroniser votre code vers un serveur en ligne, comme GitHub.
 
-Les commandes utilisées ci-dessous sont toutes disponibles sur Linux et MacOS (Unix) et (je crois) sur Windows PowerShell. Pour toutes les commandes ci-dessous, ajouter `--help` devrait fournir de l'information utile.
+Dans ce tutoriel, nous allons créer un répertoire Git pour le cours.
+Je suggère d'utiliser ce répertoire pour versionner et synchroniser votre code.
+
+Les commandes utilisées ci-dessous sont toutes disponibles sur Linux et MacOS.
+Pour Windows, l'interface de commande est différente.
+Je suggère d'utiliser PowerShell, qui se rapproche de Bash (l'interface de commande de Linux et MacOS).
+Pour toutes les commandes ci-dessous, ajouter `-h` ou `--help` devrait fournir de l'information utile, par exemple `ls -h`
+Pour PowerShell, l'aide peut être affichée avec `-?`.
+
+### Installer Git
+
+Git est installé sur Linux et MacOS. Si ce n'est pas le cas pour vous, ou si vous utilisez Windows, installez le ici: <https://git-scm.com/downloads>.
+Ensuite, fermez et ouvrez votre terminal pour que les changements soient pris en compte.
 
 ### Ouvrir un terminal
 
 Pour ce tutoriel, nous allons surtout travailler dans le terminal. Le terminal donne une interface de commande textuelle ("ligne de commande", ou CLI pour _Commande line interface_ en anglais) qui permet de manipuler des fichiers et d'exécuter des programmes.
 
-Vous pouvez ouvrir l'application "Terminal" de votre ordinateur. Pour Windows, je suggère d'utiliser le "Anaconda Prompt" s'il vous utilisez Anaconda, ou bien Windows PowerShell.
+Vous pouvez ouvrir l'application "Terminal" de votre ordinateur.
 
 Le terminal s'ouvre généralement dans le répertoire (synonyme de "dossier") _home_, dénoté par `~`. Dans _home_, on trouve généralement des dossiers "Documents", "Downloads", etc., mais vous êtes aussi libres d'ajouter d'autres dossier.
+Le raccourci `~` fonctionne aussi avec PowerShell, mais pas avec l'interface Windows par défaut. Vous pouvez simplement l'omettre si vous êtes dans votre "home" (`C:\Users\votrenom`) ou bien ajouter le texte entre parenthèse au lieu de `~`.
 
 Je suggère de créer un dossier dans lequel vous entreposez vos codes, par exemple:
 
@@ -29,13 +44,13 @@ cd ~/codes
 On peut créer un répertoire et y entrer, puis s'assurer qu'il est bien vide
 
 ```bash
-mkdir demo-tp1
-cd demo-tp1
+mkdir phy3051
+cd phy3051
 ls -a
 ```
 
-La commande `ls`  liste les fichiers et dossiers dans le répertoire.
-L'argument `-a` signifie "_all_" et permet de lister tous les fichiers, incluant les fichiers "cachés", commençant par un point.
+La commande `ls`  liste les fichiers et dossiers dans le répertoire. Pour Windows, utilisez `dir`.
+L'argument `-a` signifie "_all_" et permet de lister tous les fichiers, incluant les fichiers "cachés", commençant par un point. Pour Windows, utilisez `dir /a` ou `dir -Force` dans PowerShell.
 Dans ce cas-ci, vous devriez voir uniquement `. ..` dans la liste. `.` dénote le répertoire actuel et `..` le répertoire parent. `cd ..` permet de se déplacer dans le parent (qui ici devrait être `~/codes`).
 
 Pour que Git puisse versionner notre répertoire, il faut l'initialiser. Git sait ainsi qu'il faut suivre les changements.
@@ -78,22 +93,15 @@ git log
 
 ### Modifier un fichier
 
-Une fois notre fichier README créé, on peut y ajouter du texte. Avec un éditeur de texte, ouvrez le fichier avec un éditeur de texte (VSCode, Notepad, Sublime Text, Vim, Nano, alouette), puis ajoutez y le titre du projet ainsi qu'une courte description. Par exemple:
+Une fois notre fichier README créé, on peut y ajouter du texte. Avec un éditeur de texte, ouvrez le fichier avec un éditeur de texte (VSCode, Notepad, Sublime Text, Vim, Nano, alouette), puis ajoutez y le titre du projet ainsi qu'une courte description.
+Par exemple:
 
 ```markdown
 <!-- Ceci est un commentaire markdown et ne sera pas visible sur GitHub -->
 <!-- "#" Indique qu'il s'agit d'un titre. -->
-# TP 1 pour PHY3051
-Premier TP PHY3051: Introduction à Git et révision Python.
+# Codes pour PHY3051
 
-Voici du texte _italique_ et **gras**.
-
-Voici un bloc de code Python utilisant `numpy`:
-
-<!-- Enlever les barres obliques -->
-\`\`\`python
-import numpy as np
-\`\`\`
+Mes codes pour le cours PHY3051.
 ```
 
 Une fois ces modifications sauvegardées, `git status` devrait signaler que des fichiers ont été modifiés.
