@@ -1,4 +1,4 @@
-# Page Github pour PHY3051 et PHY6051 à l'Université de Montréal
+# Page Github pour PHY3051 à l'Université de Montréal
 
 J'utiliserai cette page pour déposer certaines ressources liées au cours et aux TP.
 
