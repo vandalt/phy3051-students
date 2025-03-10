@@ -172,3 +172,7 @@ pyrightconfig.json
 # Données
 top_secret_data.txt
 top_secret_model.txt
+data/
+
+# PyTorch
+*.pt
