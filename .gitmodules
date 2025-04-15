@@ -1,0 +1,3 @@
+[submodule "phy3051-6051-ressources"]
+	path = phy3051-6051-ressources
+	url = git@github.com:vandalt/phy3051-6051-ressources.git
